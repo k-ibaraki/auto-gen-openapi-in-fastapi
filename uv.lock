@@ -32,6 +32,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "uvicorn", extra = ["standard"] },
+    { name = "watchfiles" },
 ]
 
 [package.optional-dependencies]
@@ -51,6 +52,7 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.12.5" },
     { name = "ty", marker = "extra == 'dev'", specifier = ">=0.0.1a16" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.35.0" },
+    { name = "watchfiles", specifier = ">=1.1.0" },
 ]
 provides-extras = ["dev"]
 

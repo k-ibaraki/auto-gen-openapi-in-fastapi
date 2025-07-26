@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from .file_watcher import FileWatcher
-from .openapi_generator import generate_openapi_json, generate_openapi_yaml
+from .openapi_generator import generate_openapi_yaml
 
 
 # アプリケーションのライフサイクル管理
@@ -15,7 +15,6 @@ from .openapi_generator import generate_openapi_json, generate_openapi_yaml
 async def lifespan(app: FastAPI):
     # OpenAPIドキュメント再生成関数
     def regenerate_openapi():
-        generate_openapi_json(app, "docs/openapi.json")
         generate_openapi_yaml(app, "docs/openapi.yaml")
 
     # srcディレクトリのファイル変更を監視
