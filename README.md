@@ -20,7 +20,6 @@ uv run python app.py
 
 ## 生成されるファイル
 
-- `docs/openapi.json` - JSON形式のOpenAPIスキーマ
 - `docs/openapi.yaml` - YAML形式のOpenAPIスキーマ
 
 ## エンドポイント
